@@ -30,7 +30,7 @@ public class ATM {
         String islemler="Yapmak istediğiniz işlemi seçiniz\n"+
                 "1 - Bakiye Görüntüle\t"+
                 "2 - Para Yatırma\n"+
-                "q - Çıkış\t"+
+                "q - Çıkış\t\t"+
                 "3 - Para Çek\n";
         System.out.println(islemler);
         

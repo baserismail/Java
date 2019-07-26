@@ -7,9 +7,9 @@ public class Login {
     String kullanici;
     String sifre;
     Scanner scanner=new Scanner(System.in);
-        System.out.println("Kullanıcı: ");
+        System.out.print("Kullanıcı: ");
         kullanici=scanner.nextLine();
-        System.out.println("Şifre: ");
+        System.out.print("Şifre: ");
         sifre=scanner.nextLine();
         
         if(hesap.getKullanici().equals(kullanici)&&hesap.getSifre().equals(sifre)){
