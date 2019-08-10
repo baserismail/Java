@@ -1,6 +1,6 @@
 
-
 public class Hesap {
+
     private String kullanici;
     private String sifre;
     private int bakiye;
@@ -34,24 +34,27 @@ public class Hesap {
     public void setBakiye(int bakiye) {
         this.bakiye = bakiye;
     }
-    
-    public void paraYatir(int miktar){
-          
-        bakiye+=miktar;
-        
-        System.out.println("Yani bakiyeniz: "+bakiye);
+
+    public void paraYatir(int miktar) {
+
+        bakiye += miktar;
+
+        System.out.println("Yani bakiyeniz: " + bakiye);
     }
-    
-    public void paraCek(int miktar){
-       
-        if(miktar>bakiye){
-            System.out.println("Yeterli bakiyeniz yok..");
-            System.out.println("Mevcut bakiyeniz: "+ bakiye);
-        }
-        else{
-        bakiye-=miktar;
-            System.out.println("Kalan Bakiyeniz: "+bakiye);
+
+    // bu fonksiyonun dönüş tipini değiştirdim.
+
+    public boolean paraCek(int miktar) {
+
+        if (miktar > bakiye) {
+            return false;
+        // uygulamada buradan yanlış dönecek ve arayüz kısmında farklı farklı alertler vericez ya
+            // o yüzden ben bunlarda false döndürdüm. Sanki burası MVC yapısındaki controller gibi düşündüm .
+
+        } else {
+            bakiye -= miktar;
+            return true;
         }
     }
-                
+
 }
